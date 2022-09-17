@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #88abff;
+}
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3333;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.popup-box.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.popup .popup-head {
+  padding: 15px 25px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup .popup-head h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.popup .popup-head i {
+  color: #8b8989;
+  cursor: pointer;
+}
+.popup form {
+  margin: 15px 25px 35px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 17px;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+.form-group textarea {
+  height: 150px;
+  padding: 8px 15px;
+}
+
+.popup form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #6a93f8;
+  color: #fff;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wrapper {
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, 265px);
+  list-style: none;
+}
+.wrapper > li {
+  background: #fff;
+  height: 250px;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+}
+
+.wrapper .add-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.wrapper .add-box .icon {
+  font-size: 40px;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #88abff;
+  color: #88abff;
+  border-radius: 50%;
+}
+
+.wrapper .add-box p {
+  margin-top: 20px;
+  color: #88abff;
+  font-weight: 500;
+}
+
+.wrapper .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note .note-details h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+.note .note-details p {
+  color: #575757;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.note .note-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #bbb;
+  padding-top: 15px;
+}
+.note .note-footer span {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.note-footer .settings {
+  position: relative;
+  cursor: pointer;
+}
+
+.note-footer .settings i {
+  color: #6d6d6d;
+  pointer-events: none;
+  font-size: 15px;
+}
+.note-footer .settings .settings-menu {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  background: #fff;
+  list-style: none;
+  padding: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 15%);
+  transform-origin: bottom right;
+  transform: scale(0);
+}
+.note-footer .settings.show > .settings-menu {
+  transform: scale(1);
+}
+.note-footer .settings .settings-menu li {
+  padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.note-footer .settings .settings-menu li:hover {
+  background: #f5f5f5;
+}
+.note-footer .settings .settings-menu li i {
+  margin-right: 8px;
+}

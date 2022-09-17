@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="popup-box">
+      <div class="popup">
+        <div class="popup-head">
+          <h3>Add a new Note</h3>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="desc"> Description </label>
+            <textarea id="desc"></textarea>
+          </div>
+          <button class="add-note">Add Note</button>
+        </form>
+      </div>
+    </div>
+    <ul class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="fa-regular fa-plus"></i></div>
+        <p>Add new note</p>
+      </li>
+    </ul>
+    <script src="main.js"></script>
+  </body>
+</html>
